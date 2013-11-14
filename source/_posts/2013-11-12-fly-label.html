@@ -1,0 +1,134 @@
+---
+layout: post
+title: Fly Label 表单优化插件
+tag: 编程
+---
+
+<script src="/js/vendors/flyLabel.min.js"></script>
+<style>
+    .fly__group {
+        position: relative;
+        padding-top: 2em;
+    }
+    .fly__label {
+        font-size: .9em;
+        text-transform: uppercase;
+        position: absolute;
+        transition: all .2s ease;
+        top: 1em;
+    }
+    .fly__label--focus {
+        color: blue;
+    }
+
+    .fly__label--classic {
+        opacity: 0;
+        top: 2em;
+    }
+    .fly__label--classic.fly__label--active {
+        opacity: 1;
+        top: 1em;
+    }
+
+    .fly__label--drop {
+        opacity: 0;
+        text-shadow: 0 0 25px blue;
+        -webkit-transform: scale(11);
+        -moz-transform: scale(11);
+        -o-transform: scale(11);
+        transform: scale(11);
+        z-index: -1;
+    }
+    .fly__label--drop.fly__label--active {
+        opacity: 1;
+        text-shadow: 0 0 0px blue;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        z-index: 1;
+    }
+
+    .fly__label--from-right {
+        left: 5em;
+        opacity: 0;
+    }
+    .fly__label--from-right.fly__label--active {
+        left: 0%;
+        opacity: 1;
+    }
+
+    .fly__label--spin {
+        opacity: 0;
+    }
+    .fly__label--spin > span {
+        transition: all .5s ease;
+        display: inline-block;
+        -webkit-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+    .fly__label--spin.fly__label--active {
+        opacity: 1;
+    }
+    .fly__label--spin.fly__label--active > span {
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+</style>
+
+<p>本页面就是 <a href="http://athaeryn.github.io/flyLabel.js/">Fly Label</a> 的 Demo（IE 9 以下不用试了）。我比较喜欢第一个效果。</p>
+
+
+<hr/>
+
+<div class="fly__group">
+    <label for="classic" class="fly__label fly__label--classic">
+        <span>姓名</span>
+    </label>
+    <input type="text" id="classic" name="classic" class="fly__input" placeholder="姓名">
+</div>
+
+<div class="fly__group">
+    <label for="drop" class="fly__label fly__label--drop">
+        <span>年</span><span>龄</span>
+    </label>
+    <input id="drop" type="text" name="drop" class="fly__input" placeholder="年龄">
+</div>
+
+<div class="fly__group">
+    <label for="from-right" class="fly__label fly__label--from-right">
+        <span>手机号</span>
+    </label>
+    <input id="from-right" type="text" name="from-right" class="fly__input" placeholder="手机号">
+</div>
+
+<div class="fly__group">
+    <label for="spin" class="fly__label fly__label--spin">
+        <span>个</span><span>人</span><span>简</span><span>介</span>
+    </label>
+    <input id="spin" type="text" name="spin" class="fly__input" placeholder="个人简介">
+</div>
+<hr/>
+
+<p>与其说这是一个 jQuery 插件，还不如说这是一个 Label CSS 动画合集。其原理就是通过改变 label 的 CSS 类名来实现相应的动画。如果你有不错的 CSS 动画代码，可以很容易地扩展它。</p>
+
+<p>使用方法：</p>
+<p>
+<ol>
+    <li>在页面中引入 jQuery 和 flyLabel.js</li>
+    <li>在页面中引入所有名字以 fly 开头的 CSS 类（从本页面的源代码中拷贝即可）</li>
+    <li>在脚本中添加<code>$('xxx').flyLabels(); // xxx 是 Label 的父容器</code></li>
+</ol>
+</p>
+
+<p>我在手机上试了一下，效果也不错。</p>
+
+<script>
+    $(function () {
+        $('body').flyLabels();
+    });
+</script>
