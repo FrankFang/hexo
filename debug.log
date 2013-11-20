@@ -1,0 +1,65 @@
+date: 2013-11-20 22:56:16.527
+argv: node /usr/local/bin/hexo generate
+os: Darwin 13.0.0 darwin x64
+version:
+  hexo: 2.3.0
+  http_parser: 1.0
+  node: 0.10.21
+  v8: 3.14.5.9
+  ares: 1.9.0-DEV
+  uv: 0.10.18
+  zlib: 1.2.3
+  modules: 11
+  openssl: 1.0.1e
+---
+
+[debug] 22:56:15.492 Configuration file load successfully
+[debug] 22:56:15.533 Plugin loaded successfully: hexo-renderer-less
+[debug] 22:56:15.534 Version info checked successfully
+[debug] 22:56:15.534 Loading the database...
+[debug] 22:56:15.760 Theme layout loaded
+[debug] 22:56:15.826 Theme configuration loaded
+[debug] 22:56:15.830 Theme source loaded
+[debug] 22:56:15.837 Theme i18n loaded
+[debug] 22:56:15.896 Processed: _posts/2013-10-10-the-last-year.md
+[debug] 22:56:15.917 Processed: _posts/2013-10-21-living-without-sodas-for-a-month.md
+[debug] 22:56:15.942 Processed: _posts/2013-10-22-gittip.md
+[debug] 22:56:16.103 Processed: _posts/2013-11-01-declaring-multiple-variables-in-javascript.md
+[debug] 22:56:16.109 Processed: _posts/2013-11-11-thougnts.md
+[debug] 22:56:16.115 Processed: _posts/2013-11-12-fly-label.html
+[debug] 22:56:16.120 Processed: _posts/2013-11-13-tools.md
+[debug] 22:56:16.393 Cache saved
+[info] 22:56:16.394 Files loaded in 0.655s
+[debug] 22:56:16.398 Public folder not exists. No need to clear public folder.
+[debug] 22:56:16.401 Render archive: archives/
+[debug] 22:56:16.402 Render archive: archives/2013/
+[debug] 22:56:16.402 Render archive: archives/2013/10/
+[debug] 22:56:16.402 Render archive: archives/2013/11/
+[debug] 22:56:16.402 Render index: 
+[debug] 22:56:16.402 Render index: page/2/
+[debug] 22:56:16.402 Render index: page/3/
+[debug] 22:56:16.402 Render post: 2013/11/13/tools/
+[debug] 22:56:16.402 Render post: 2013/11/12/fly-label/
+[debug] 22:56:16.402 Render post: 2013/11/11/thougnts/
+[debug] 22:56:16.402 Render post: 2013/11/01/declaring-multiple-variables-in-javascript/
+[debug] 22:56:16.402 Render post: 2013/10/22/gittip/
+[debug] 22:56:16.402 Render post: 2013/10/21/living-without-sodas-for-a-month/
+[debug] 22:56:16.402 Render post: 2013/10/10/the-last-year/
+[debug] 22:56:16.402 Render tag: tags/生活/
+[debug] 22:56:16.402 Render tag: tags/趣闻/
+[debug] 22:56:16.403 Render tag: tags/编程/
+[error] 22:56:16.524 HexoError: Render failed: css/style.css
+undefined
+
+[error] 22:56:16.524 TypeError: Cannot read property 'grey' of undefined
+TypeError: Cannot read property 'grey' of undefined
+    at Console._write (/usr/local/lib/node_modules/hexo/lib/logger/console.js:46:65)
+    at null.<anonymous> (/usr/local/lib/node_modules/hexo/lib/logger/stream.js:24:12)
+    at EventEmitter.emit (events.js:95:17)
+    at Logger._emit (/usr/local/lib/node_modules/hexo/lib/logger/index.js:140:8)
+    at Logger.log (/usr/local/lib/node_modules/hexo/lib/logger/index.js:126:8)
+    at Logger.(anonymous function).Logger.(anonymous function) (/usr/local/lib/node_modules/hexo/lib/logger/index.js:158:14)
+    at /usr/local/lib/node_modules/hexo/lib/init.js:268:20
+    at /usr/local/lib/node_modules/hexo/lib/plugins/console/generate/index.js:118:33
+    at /usr/local/lib/node_modules/hexo/lib/post/load.js:366:29
+    at /Users/frank/github/hexo/node_modules/hexo-renderer-less/index.js:11:21

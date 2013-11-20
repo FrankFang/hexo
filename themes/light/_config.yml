@@ -19,9 +19,10 @@ addthis:
   google: true
   pinterest: true
 
-fancybox: true
+fancybox: false
 
 google_analytics:
+baidu_analytics: f67f679842d89dcdbd978d4f954af51e
 rss:
 
 comment_provider: facebook
