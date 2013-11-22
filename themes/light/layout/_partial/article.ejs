@@ -1,4 +1,4 @@
-<article class="<%= item.layout %>">
+<article class="<% if (index) { %>index<% } else{ %> <%= item.layout %> <% } %>">
   <%- partial('post/title') %>
   <% if (!index) { %>
   <%- item.content %>

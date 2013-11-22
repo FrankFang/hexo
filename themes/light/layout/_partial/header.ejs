@@ -1,11 +1,17 @@
+<img id="myAvatar" src="about:blank" alt="Frank Fang"/>
 <hgroup>
-	<h1><a href="<%- config.root %>"><%= config.title %></a></h1>
-	<h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
+  <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
+
+  <h2><a href="<%- config.root %>">
+      <% if (config.subtitle){ %>
+      <%= config.subtitle %>
+      <% } %>
+    </a></h2>
 </hgroup>
 <nav id="siteNav">
-	<ul>
-		<% for (var i in theme.menu){ %>
-		<li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
-		<% } %>
-	</ul>
+  <ul>
+    <% for (var i in theme.menu){ %>
+    <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+    <% } %>
+  </ul>
 </nav>

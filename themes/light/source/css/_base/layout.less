@@ -6,21 +6,25 @@
     html { height: 100%; }
     body { max-height: 100%; overflow: hidden; height: 100%; }
 
-    .page { .flexbox; height: 100%; overflow: auto;
+    body { .flexbox; height: 100%; overflow: auto;
       > header {
-        background-color: #f00;
-        min-width: 300px;
+        background-color: @color-blue;
+        color: white;
+        min-width: 280px;
+        padding: 10px;
       }
       > main {
+        width: 100%;
         height: 100%;
         overflow: auto;
       }
       > footer {
         position: absolute;
         bottom: 0;
-        right: 0;
+        left: 0;
       }
     }
+
   }
   @media (max-width: 480px) {
     header { background-color: black; }
