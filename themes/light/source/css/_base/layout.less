@@ -1,12 +1,24 @@
 /*!layout.less*/
+@import "utils";
 @media screen {
-  @media (min-width: 480px) {
-    body {
+  @media (min-width: 1024px) {
+
+    html { height: 100%; }
+    body { max-height: 100%; overflow: hidden; height: 100%; }
+
+    .page { .flexbox; height: 100%; overflow: auto;
       > header {
-        position: fixed;
-        height: 100%;
         background-color: #f00;
-        width: 300px;
+        min-width: 300px;
+      }
+      > main {
+        height: 100%;
+        overflow: auto;
+      }
+      > footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
       }
     }
   }
