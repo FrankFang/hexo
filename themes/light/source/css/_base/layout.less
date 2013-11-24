@@ -7,8 +7,9 @@
     body { max-height: 100%; overflow: hidden; height: 100%; }
 
     body { .flexbox; height: 100%; overflow: auto;
+      background: @color-bg;
       > header {
-        background-color: @color-blue;
+        background-color: @color-bg-header;
         color: white;
         min-width: 280px;
         padding: 10px;
@@ -26,8 +27,7 @@
     }
 
   }
-  @media (max-width: 480px) {
-    header { background-color: black; }
+  @media (max-width: 1024px) {
   }
 }
 

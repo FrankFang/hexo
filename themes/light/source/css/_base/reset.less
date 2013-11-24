@@ -1,5 +1,14 @@
 /*!reset.less*/
+@import "utils";
 * { margin: 0; padding: 0; }
 img { border: none; }
-a { text-decoration: underline; color: inherit; }
+a { text-decoration: none; color: inherit; }
 ul, ol, dl { list-style: none }
+::-moz-selection {
+  background: @color-red;
+  color: white;
+}
+::selection {
+  background: @color-red;
+  color: white;
+}
