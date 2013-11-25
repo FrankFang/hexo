@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <!-- title -->
   <%
   var title = [];
   if (page.current > 1) title.push(__('page', page.current));
@@ -12,10 +13,19 @@
   }
   title.push(config.title);
   %>
-  <title><%= title.join(' | ') %></title>
+  <title><%= title.join(" | ") %></title>
+  <!-- title ends -->
+
+  <!-- html5 support -->
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <!-- jQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <!-- jQuery ends -->
+
+  <!-- meta info -->
   <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
+
   <% if (page.description){ %>
   <meta name="description" content="<%= page.description %>">
   <% } else if (config.description){ %>
@@ -25,6 +35,7 @@
   <% } else if (page.content){ %>
   <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
   <% } %>
+
   <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -36,6 +47,7 @@
   <% } else { %>
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
+  <!-- meta info ends -->
 
   <link href="<%- config.root %>favicon.png" rel="icon">
 
