@@ -55,18 +55,21 @@ article {
   a { color: @color-link; }
   img { border: 1px dashed @color-border; }
   footer {
-    .prev { float: left;
-      &:before {
-        content: '\f053';
-        margin-right: .5em;
-        font-family: @font-icon;
+    nav {
+      a { background: @color-border; padding: 1px 3px; }
+      .prev { float: left;
+        &:before {
+          content: '\f053';
+          margin-right: .5em;
+          font-family: @font-icon;
+        }
       }
-    }
-    .next { float: right;
-      &:after {
-        content: '\f054';
-        margin-left: .5em;
-        font-family: @font-icon;
+      .next { float: right;
+        &:after {
+          content: '\f054';
+          margin-left: .5em;
+          font-family: @font-icon;
+        }
       }
     }
   }
