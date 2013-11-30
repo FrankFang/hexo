@@ -1,4 +1,4 @@
-title: web-died
+title: 消费与创造
 date: 2013-12-01 00:56:48
 tags: Quote
 ---
