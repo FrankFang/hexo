@@ -8,22 +8,22 @@ body {
         padding: 10px 15px;
       }
     }
-  }
-}
-#pagination {
-  a { }
-  .prev {
-    &:before {
-      content: '\f053';
-      padding-right: 10px;
-      font-family: font-icon;
-    }
-  }
-  .next {
-    &:after {
-      content: '\f054';
-      padding-left: 10px;
-      font-family: font-icon;
+    > nav { margin: 0 30px 20px;
+      a { background: @color-border; padding: 1px 3px; color: @color-link; }
+      .prev { float: left;
+        &:before {
+          content: '\f053';
+          margin-right: .5em;
+          font-family: @font-icon;
+        }
+      }
+      .next { float: right;
+        &:after {
+          content: '\f054';
+          margin-left: .5em;
+          font-family: @font-icon;
+        }
+      }
     }
   }
 }
