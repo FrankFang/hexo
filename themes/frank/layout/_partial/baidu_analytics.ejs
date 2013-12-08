@@ -1,10 +1,5 @@
-<% if (theme.baidu_analytics){ %>
-<script>
-  var protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-  var script = document.createElement('script');
-  script.async = true;
-  script.src = protocol + 'hm.baidu.com/h.js?' + '<%= theme.baidu_analytics%>';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(script, s);
+<script type="text/javascript">
+  var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff67f679842d89dcdbd978d4f954af51e' type='text/javascript'%3E%3C/script%3E"));
 </script>
-<% } %>
+
