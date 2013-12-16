@@ -13,43 +13,23 @@ article {
   color: @color-text;
   blockquote {
     border-left: 3px solid @color-quoteBorder;
-    p {
-      padding: 0 1em;
-    }
+    p { padding: 0 1em; }
   }
-  p, ul, ol, dl, pre {
-    margin-bottom: 1rem;
-  }
-  ol {
-    counter-reset: orderItemCounter;
-    li {
-      padding-left: 1em;
-      position: relative;
-      counter-increment: orderItemCounter;
-      &:before {
-        content: counter(orderItemCounter);
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
+  p, ul, ol, dl, pre { margin-bottom: 1rem; }
+  ol { counter-reset: orderItemCounter;
+    li { padding-left: 1em; position: relative; counter-increment: orderItemCounter;
+      &:before { content: counter(orderItemCounter); position: absolute; left: 0; top: 0; }
     }
   }
   ul {
     li { padding-left: 1em; position: relative;
-      &:before { font-family: FontAwesome; content: "\f0da"; position: absolute;
-        left: 2px; top: 2px;
+      &:before { font-family: FontAwesome; content: "\f0da"; position: absolute; left: 2px; top: 2px;
       }
     }
-
   }
   pre {
-    code {
-      border-left: 3px solid @color-blue;
-      line-height: 1.5;
-      display: block;
-      padding-left: 1em;
-      font-family: @font-mono;
-      font-size: 12px;
+    code { border-left: 3px solid @color-blue; line-height: 1.5; display: block; padding-left: 1em;
+      font-family: @font-mono; font-size: 12px;
     }
   }
   a { color: @color-link; }
@@ -58,29 +38,18 @@ article {
     nav {
       a { background: @color-border; padding: 1px 3px; }
       .prev { float: left;
-        &:before {
-          content: '\f053';
-          margin-right: .5em;
-          font-family: @font-icon;
-        }
+        &:before { content: '\f053'; margin-right: .5em; font-family: @font-icon; }
       }
       .next { float: right;
-        &:after {
-          content: '\f054';
-          margin-left: .5em;
-          font-family: @font-icon;
-        }
+        &:after { content: '\f054'; margin-left: .5em; font-family: @font-icon; }
       }
     }
   }
   &.index {
     a { color: @color-text; }
   }
-  &:not(.index) {
-    padding: 20px;
-    h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 1rem;
-    }
+  &:not(.index) { padding: 20px;
+    h1, h2, h3, h4, h5, h6 { margin-bottom: 1rem; }
   }
   &.page { }
   &.post { }

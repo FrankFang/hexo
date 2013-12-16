@@ -2,14 +2,14 @@
 @radius: 40px;
 @border-width: 3px;
 body {
-  > header { text-align: center;
-    padding: 10px 0;
+  > header { text-align: center; padding: 10px 0; position: relative;
 
     @media (min-width: 1024px) {
       background-color: @color-bg-header;
       color: white;
       box-shadow: -1px 0px 0 fadeout(black, 80%) inset ;
     }
+
     figure { display: inline-block; position: relative;
       &:before { content: ''; position: absolute; top: @border-width; left: @border-width; bottom: @border-width;
         right: @border-width; border-radius: @radius; box-shadow: 0 0 2px 1px fadeout(black, 80%) inset; }
@@ -17,12 +17,14 @@ body {
         border: 3px solid white;
       }
     }
-    hgroup { text-align: center; margin-top: 1rem;
-      text-shadow: fadeout(black, 50%) 0 0 -1px;
-      h1 {
-        font-weight: 300;
+
+    hgroup { text-align: center; margin-top: 1rem; text-shadow: fadeout(black, 50%) 0 0 -1px;
+      h1 { font-weight: 300;
+        @media (min-width: 1024px) {
+          text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.2);
+        }
       }
-      h3 {
+      h3 { font-weight: 300;
         @media (min-width: 1024px) {
           text-shadow: 1px 1px 0px @color-bg-header, 0 0 0 black;
           color: fadeout(darken(@color-bg-header, 20%), 20%);
@@ -31,28 +33,20 @@ body {
           text-shadow: 1px 1px 0px white, 0 0 0 black;
           color: fadeout(@color-link, 20);
         }
-        font-weight: 300;
       }
     }
-    nav {
-      @_color-bg-nav: hsl(164, 47%, 43%);
+
+    nav { @_color-bg-nav: hsl(164, 47%, 43%); position: absolute; width: 100%; bottom: 0;
       @media (min-width: 1024px) {
         margin-top: 1em;
-        ul {
-          border-top: 1px solid darken(@_color-bg-nav, 10%);
-          border-bottom: 1px solid lighten(@_color-bg-nav, 10%);
-          li {
-            border-top: 1px solid lighten(@_color-bg-nav, 10%);
-            border-bottom: 1px solid darken(@_color-bg-nav, 10%);
-            background: @_color-bg-nav;
-            box-shadow: -1px 0px 0 fadeout(black, 80%) inset;
-            a {
-              display: block;
-              padding: 15px 0;
-            }
+        ul { border-top: 1px solid darken(@_color-bg-nav, 10%);
+          li { border-top: 1px solid lighten(@_color-bg-nav, 10%); border-bottom: 1px solid darken(@_color-bg-nav, 10%);
+            background: @_color-bg-nav; box-shadow: -1px 0px 0 fadeout(black, 80%) inset;
+            a { display: block; padding: 15px 0; }
           }
         }
       }
     }
+
   }
 }

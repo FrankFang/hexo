@@ -1,11 +1,10 @@
 menu:
   主页: /
-  所有文章: /archives
   作品: /works
 
 widgets:
 
-excerpt_link: Read More
+excerpt_link: 查看全文
 
 twitter:
   username:

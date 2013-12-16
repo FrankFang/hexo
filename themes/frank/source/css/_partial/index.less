@@ -1,28 +1,16 @@
 @import "../_base/utils";
 body {
   > main {
-    > ol {
-      margin: 0 30px 20px;
-      li {
-        border-bottom: 1px solid @color-border;
-        padding: 10px 0;
-      }
+    > .articleList { margin: 0 30px 20px;
+      li { border-bottom: 1px solid @color-border; padding: 10px 0; }
     }
     > nav { margin: 0 30px 20px;
       a { background: @color-border; padding: 1px 3px; color: @color-link; }
       .prev { float: left;
-        &:before {
-          content: '\f053';
-          margin-right: .5em;
-          font-family: @font-icon;
-        }
+        &:before { content: '\f053'; margin-right: .5em; font-family: @font-icon; }
       }
       .next { float: right;
-        &:after {
-          content: '\f054';
-          margin-left: .5em;
-          font-family: @font-icon;
-        }
+        &:after { content: '\f054'; margin-left: .5em; font-family: @font-icon; }
       }
     }
   }
