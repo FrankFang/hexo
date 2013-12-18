@@ -11,6 +11,7 @@ body {
     }
 
     figure { display: inline-block; position: relative;
+      a { display: inline-block; }
       &:before { content: ''; position: absolute; top: @border-width; left: @border-width; bottom: @border-width;
         right: @border-width; border-radius: @radius; box-shadow: 0 0 2px 1px fadeout(black, 80%) inset; }
       img { box-shadow: 0 0 2px 0 fadeout(black, 60%); border-radius: 43px; vertical-align: top;
@@ -37,6 +38,9 @@ body {
     }
 
     nav { @_color-bg-nav: hsl(164, 47%, 43%); position: absolute; width: 100%; bottom: 0;
+      @media (max-width: 1023px) {
+        display: none;
+      }
       @media (min-width: 1024px) {
         margin-top: 1em;
         ul { border-top: 1px solid darken(@_color-bg-nav, 10%);
@@ -45,9 +49,6 @@ body {
             a { display: block; padding: 15px 0; }
           }
         }
-      }
-      @media (max-width: 1024px) {
-        display: none;
       }
     }
 
