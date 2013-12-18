@@ -2,11 +2,13 @@
   <% site.posts.each(function (item) {
       if (item.tags.first().name == 'work') { %>
   <li>
-    <div class="inner">
-      <a href="<%- config.root + item.path %>"><%= item.title %></a>
-      <%= item.excerpt %>
-      <a href="<%- config.root + item.path %>"><%= theme.excerpt_link %></a>
-    </div>
+    <a class="inner" href="<%- config.root + item.path %>">
+      <h3><%= item.title %></h3>
+
+      <div><img src="<%= item.thumb %>" alt="<%= item.title %>" title="<%= item.title %>"/></div>
+
+      <%- item.excerpt %>
+    </a>
   </li>
 
   <% }

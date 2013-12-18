@@ -1,15 +1,18 @@
 @import "../_base/utils";
 body {
   > main {
-    > .workList { .clearfix; height: 100%; padding-right: 8px; padding-bottom: 10px;
-      li { float: left; min-width: 300px; min-height: 150px; width: 33.3%; height: 50%; position: relative;
-        .inner {
-          //          position: absolute;
-          //          top: 0; left: 0; right: 0; bottom: 0;
-          height: ~"calc(100% - 10px)";
-          width: ~"calc(100% - 8px)";
-          margin: 10px 0 0 8px;
-          background: fadeout(red, 40%)
+    > .workList { .clearfix; height: ~"calc(100% - 20px)"; margin: 10px 8px;
+      border-top: 1px solid #ddd; border-left: 1px solid #ddd;
+      li { float: left; min-width: 300px; min-height: 150px; width: ~"calc(33.3% - 1px)"; height: ~"calc(50% - 1px)"; position: relative;
+        border-width: 0 1px 1px 0; border-color: #ddd; border-style: solid;
+        .inner { width: 90%; margin: 0 auto; display: block;
+        }
+        img { max-width: 100%; margin-bottom: 10px; }
+        h3 { margin: 10px 0; }
+        p { font-size: 14px; color: @color-mute; }
+        &:before { content: "\f109";
+          font-family: @font-icon;
+          position: absolute; right: 0; bottom: 0; color: #ddd; margin-right: 10px; margin-top: 20px;
         }
       }
     }

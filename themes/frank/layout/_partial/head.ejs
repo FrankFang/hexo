@@ -7,7 +7,7 @@
   var title = [];
   if (page.current > 1) title.push(__('page', page.current));
   if (page.title) title.push(page.title);
-  if (page.archive){
+  if (page.archive) {
     if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
     else title.push(__('archive_a'));
   }
@@ -17,14 +17,17 @@
   <!-- title ends -->
 
   <!-- html5 support -->
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <!-- jQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <!-- jQuery ends -->
 
   <!-- meta info -->
-  <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
+  <% if (config.author){ %>
+  <meta name="author" content="<%= config.author %>">
+  <% } %>
 
   <% if (page.description){ %>
   <meta name="description" content="<%= page.description %>">
@@ -36,22 +39,27 @@
   <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
   <% } %>
 
-  <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } %>
+  <% if (page.keywords){ %>
+  <meta name="keywords" content="<%= page.keywords %>">
+  <% } %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
+  <% if (page.title){ %>
+  <meta property="og:title" content="<%= page.title %>"/>
+  <% } %>
   <meta property="og:site_name" content="<%= config.title %>"/>
 
   <% if(page.cover) { %>
-    <meta property="og:image" content="<%= page.cover %>" />
+  <meta property="og:image" content="<%= page.cover %>"/>
   <% } else { %>
-    <meta property="og:image" content="<%= config.cover %>"/>
+  <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
   <!-- meta info ends -->
 
   <link href="<%- config.root %>favicon.png" rel="icon">
 
-  <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
+  <link rel="alternate" href="<% if (theme.rss){ %> <%- theme.rss %> <% } else { %> <%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
 
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 </head>
