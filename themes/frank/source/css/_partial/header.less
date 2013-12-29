@@ -1,6 +1,8 @@
 @import "../_base/utils";
 @radius: 40px;
 @border-width: 3px;
+
+@_color-bg-nav: hsl(164, 47%, 43%);
 body {
   > header { text-align: center; padding: 10px 0; position: relative;
 
@@ -8,6 +10,9 @@ body {
       background-color: @color-bg-header;
       color: white;
       box-shadow: -1px 0px 0 fadeout(black, 80%) inset ;
+    }
+    @media (max-width: 1023px) {
+      border-top: 6px solid darken(@color-link, 15%);
     }
 
     figure { display: inline-block; position: relative;
@@ -37,7 +42,7 @@ body {
       }
     }
 
-    nav { @_color-bg-nav: hsl(164, 47%, 43%); position: absolute; width: 100%; bottom: 0;
+    nav { position: absolute; width: 100%; bottom: 0;
       @media (max-width: 1023px) {
         display: none;
       }
