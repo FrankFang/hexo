@@ -13,9 +13,12 @@ article {
   color: @color-text;
   iframe { width: 100%; height: 200px; display: block; }
   hr { margin-bottom: 20px; }
-  blockquote {
+  code { margin: 0 2px; padding: 0px 5px; border: 1px solid hsl(0, 0%, 87%); background-color: hsl(0, 0%, 97%);
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+  }
+  blockquote { padding: 0 1em;
     border-left: 3px solid @color-quoteBorder;
-    p { padding: 0 1em; }
   }
   p, ul, ol, dl, pre { margin-bottom: 1rem; }
   ol { counter-reset: orderItemCounter;
