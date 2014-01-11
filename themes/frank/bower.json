@@ -4,6 +4,7 @@
     "js-md5": "~1.1.0"
   },
   "dependencies": {
-    "jquery": "~2.0.3"
+    "jquery": "~2.0.3",
+    "less-elements": "*"
   }
 }
