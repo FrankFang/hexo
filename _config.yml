@@ -5,10 +5,11 @@
 # Site
 title: 方应杭的个人博客
 subtitle: 编程 / 生活 / 感悟
-description:
+description: 方应杭的个人博客
 author: Frank Fang
 email: me@frankfang.com
 language: zh-Hans
+keywords: 方应杭,前端开发,工程师
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

@@ -2,6 +2,7 @@
 layout: post
 tag: 编程
 title: JavaScript 中的变量声明
+keywords: JavaScript,js,变量声明,分号
 ---
 
 JS 中怎么声明变量？[Douglas Crockford][1] 在 2011 年的[一次演讲][2]中的观点是：
