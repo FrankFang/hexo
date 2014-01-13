@@ -1,6 +1,6 @@
 title: 享受 Grunt
 date: 2013-12-29 22:10:25
-tags: 编程
+category: tool
 keywords: grunt,awesome,grunt awesome
 ---
 

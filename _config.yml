@@ -3,8 +3,8 @@
 ## Source: https://github.com/tommy351/hexo/
 
 # Site
-title: 方应杭的个人博客
-subtitle: 编程 / 生活 / 感悟
+title: 前端超人
+subtitle: 看前端，学前端，我有知识我自豪
 description: 方应杭的个人博客
 author: Frank Fang
 email: me@frankfang.com
@@ -76,7 +76,7 @@ disqus_shortname:
 ## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
 ## Themes: https://github.com/tommy351/hexo/wiki/Themes
 theme: frank
-exclude_generator: category
+# exclude_generator: category
 
 # Deployment
 ## Docs: http://zespia.tw/hexo/docs/deploy.html

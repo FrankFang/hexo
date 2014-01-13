@@ -1,6 +1,6 @@
 title: CSS相框
 date: 2013-11-28 14:14:33
-tags: 编程
+category: css
 keywords: css相框,铺满父元素
 ---
 

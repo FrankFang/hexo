@@ -1,1 +1,6 @@
+<!-- FIXME: Remove the condition -->
+<% if( page.category === 'work'){ %>
+<%- partial('works', {pagination: config.category }) %>
+<% } else { %>
 <%- partial('_partial/archive', {pagination: config.category}) %>
+<% } %>

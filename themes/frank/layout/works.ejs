@@ -1,6 +1,6 @@
 <ol class="workList">
-  <% site.posts.each(function (item) {
-      if (item.tags.first().name == 'work') { %>
+  <% site.posts.each(function (item) { %>
+  <% if (item.categories && item.categories.first().name == 'work') { %>
   <li>
     <a class="inner" href="<%- config.root + item.path %>">
       <h3><%= item.title %></h3>
