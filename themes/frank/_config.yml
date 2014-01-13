@@ -1,7 +1,8 @@
 menu:
   主页: /
-  作品: /works
-  联系我: /contact
+  作品: /categories/work/
+  JavaScript: /categories/js/
+  关于: /about
 
 widgets:
 

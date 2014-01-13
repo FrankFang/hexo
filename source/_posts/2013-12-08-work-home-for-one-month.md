@@ -1,6 +1,6 @@
 title: 走路回家一个月
 date: 2013-12-08 22:23:03
-tags: 生活
+category: other
 keywords: 一个月,走路回家
 ---
 

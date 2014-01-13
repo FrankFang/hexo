@@ -1,6 +1,6 @@
 title: 基本演绎法第一季
 date: 2013-11-26 12:45:26
-tags: 影评
+category: other
 keywords: 基本演绎法,影评
 ---
 
