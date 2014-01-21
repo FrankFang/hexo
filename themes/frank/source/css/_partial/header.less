@@ -18,12 +18,18 @@ body {
     }
 
     figure { display: inline-block; position: relative;
-      a { display: inline-block; }
-      &:before { content: ''; position: absolute; top: @border-width; left: @border-width; bottom: @border-width;
-        right: @border-width; .rounded(@radius); box-shadow: 0 0 2px 1px fadeout(black, 80%) inset; }
-      img { box-shadow: 0 0 2px 0 fadeout(black, 60%); .rounded(43px); vertical-align: top;
-        border: 3px solid white;
+      a { display: inline-block;
+        > canvas {
+          -webkit-transform: rotate(45deg); transition: all .8s;
+          &:hover { -webkit-transform: rotate(-315deg); }
+        }
       }
+
+      //      &:before { content: ''; position: absolute; top: @border-width; left: @border-width; bottom: @border-width;
+      //        right: @border-width; .rounded(@radius); box-shadow: 0 0 2px 1px fadeout(black, 80%) inset; }
+      //      img { box-shadow: 0 0 2px 0 fadeout(black, 60%); .rounded(43px); vertical-align: top;
+      //        border: 3px solid white;
+      //      }
     }
 
     hgroup { text-align: center; margin-top: 1rem; text-shadow: fadeout(black, 50%) 0 0 -1px;

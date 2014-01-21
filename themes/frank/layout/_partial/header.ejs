@@ -1,6 +1,48 @@
 <header>
   <figure>
-    <a href="/"><img id="myAvatar" width="80" height="80" src="http://www.gravatar.com/avatar/9eb5227d1d98e4a1796d60216d6b8327?s=80" alt="Frank Fang"/></a>
+    <!--<a href="/"><img id="myAvatar" width="80" height="80" src="http://www.gravatar.com/avatar/9eb5227d1d98e4a1796d60216d6b8327?s=80" alt="Frank Fang"/></a>-->
+    <a href="/">
+      <canvas id="logo" width="80" height="80"></canvas>
+    </a>
+    <script>
+      var c = document.getElementById('logo')
+      var ctx = c.getContext('2d')
+      var w = c.width
+      var PI = Math.PI
+      var sin = Math.sin
+      var cos = Math.cos
+      var tan = Math.tan
+
+      ctx.beginPath()
+      ctx.moveTo(w / 2, w)
+      ctx.arc(w / 2, w / 2, w / 2, 0, PI * 4 / 2)
+
+
+      ctx.fillStyle = "red";
+      ctx.fill()
+
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(w, w / 2 + w / 2 * tan(PI / 8), w / 2 * tan(PI / 8), 0, PI * 2)
+      ctx.fill();
+      ctx.restore();
+
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(w / 2 + w / 2 * tan(PI / 8), w, w / 2 * tan(PI / 8), 0, PI * 2)
+
+      ctx.fill();
+      ctx.restore();
+
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(w * 3 / 8, w * 3 / 8, w / 2 * tan(PI / 8) / 2, 0, PI * 2)
+      ctx.fill();
+      ctx.restore();
+    </script>
   </figure>
   <hgroup>
     <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
