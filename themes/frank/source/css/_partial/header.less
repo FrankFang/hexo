@@ -19,10 +19,10 @@ body {
 
     figure { display: inline-block; position: relative;
       a { display: inline-block;
-        > canvas {
-          -webkit-transform: rotate(45deg); transition: all .8s;
-          &:hover { -webkit-transform: rotate(-315deg); }
+        > canvas { transition: all .8s;
+          -webkit-transform: rotateY(0deg) rotate(45deg);
         }
+        &:hover > canvas { -webkit-transform: rotateY(180deg) rotate(45deg); }
       }
 
       //      &:before { content: ''; position: absolute; top: @border-width; left: @border-width; bottom: @border-width;
